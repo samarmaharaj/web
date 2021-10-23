@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background: #f1f1f1;
+}
+
+/* The laptop with borders */
+.laptop {
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+  transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+  left: 50%;
+  position: absolute;
+  width: 686px;
+  height: 400px;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: black;
+  border-width: 12px 12px 40px;
+  background-color: black;
+
+}
+
+/* The keyboard of the laptop */
+.laptop:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 800px;
+  height: 30px;
+  margin: 80px 0 0 -55px;
+  background: black;
+  border-radius: 3px;
+}
+
+/* The top of the keyboard */
+.laptop:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 125px;
+  height: 15px;
+  bottom: -55px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  background: #000;
+  border-bottom-left-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+  z-index: 1;
+}
+
+/* The screen (or content) of the device */
+.laptop .content {
+  width: 686px;
+  height: 400px;
+  overflow: hidden;
+  border: none;
+}
+</style>
+</head>
+<body>
+
+<div class="laptop">
+  <div class="content">
+    <img id="demo" onclick="myFunction()" src="https://source.unsplash.com/random" width="100%" >
+    <iframe id="show"  src="https://samarmaharaj.github.io/projects/inspire.html" style="width:100%;border:none;height:100%; display : none" />
+  </div>
+</div>
+<button onclick="hello()">click</button>
+<p id="demo2" ></p>
+
+<script type="text/javascript">
+function hello(){
+  document.getElementById("demo2").innerHTML = "hello";
+}
+</script>
+</body>
+</html>
